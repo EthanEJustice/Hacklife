@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<!-- 
+        Author: Ethan Justice & Jesus Gonzalez
+-->       
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, intiial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="hacklife.css">
+</head>  
+<body id ="body" style = "text-align:center;" onclick="CreateAd()">
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="openTab('HackLife')">Creators</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="openTab('Most Recent Update')">General Haks</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="openTab('About')">Bathroom Haks</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="openTab('Features')">Kitchen Haks</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="openTab('Learn')">Technology Haks</a>
+ </div>
+
+ <script>
+    function RandomNum(min, max) {
+        return Math.floor(Math.random() * (max - min) ) + min;
+    }
+    function CreateAd() { 
+        var img = new Image(); 
+        var ads =[
+            'https://preview.redd.it/wjyhvbjti3q51.png?width=302&format=png&auto=webp&s=4933ae8e5b5d799eb713367369941e2f500daaf9',
+            'https://pbs.twimg.com/media/EMzpogUWwAE83BL.png',
+            'https://cdn.mos.cms.futurecdn.net/98JQSBkJgZBKhqqQHzftqn.jpg',
+            'https://www.best-vpn.net/wp-content/uploads/2015/11/ExpressVPN-Ad.jpg'
+        ]  
+        img.src =  ads[RandomNum(0,4)];
+        document.getElementById('body').appendChild(img); 
+        }  
+
+    function openTab(tabName) {
+        var i;
+        var x = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+    }
+    document.getElementById(tabName).style.display = "block";  
+}
+</script>
+
+<!--Creator Tab-->
+<div id="HackLife" class="w3-container tab">
+<h1 title="HackLife">
+    <Strong>HackLife</Strong>
+</h1>
+<pre style="color: white;font-size: x-large;font-family: 'Times New Roman', Times, serif;text-align: center;" >
+    By: Ethan Justice & Jesus Gonzalez
+            
+    Team: 3L1T3 HACK3R5
+</pre>
+</div>
+<!--End Creator Tab-->
+
+<!--General Haks Tab-->
+<div id="Most Recent Update" class="w3-container tab" style="display:none;">
+<h1>General Haks</h1>
+
+<div class="container"></div>
+<img src="popcorn-alarm.png" alt="Popcorn Alarm" class="center">
+<div class="top-left" style="color: aliceblue;">If you don't have fire alarms use popcorn instead! </div>
+
+<img src="86-dorm-smell-bad.webp" alt="Dorm Hack" class="center padding">
+
+<img src="keep-a-card-like-this.png" alt="Life Card" class="center padding">
+
+</div>
+</div>
+<!--End Updates Tab-->
+
+<!--Bathroom Tab-->
+<div id="About" class="w3-container tab" style="display:none;">
+<h1>Bathroom Haks</h1>
+
+<img src="filling-bucket-life-hack.png" alt="Fill bucket" class="centersmall">
+<img src="eyeliner.jpg" alt="Eyeliner Hack" class="centersmall padding">
+
+</div>
+<!--End About Tab-->
+
+<!--Kitcken Tab-->
+<div id="Features" class="w3-container tab" style="display:none;">
+<h1>Kitchen Haks</h1>
+
+<img src="avocadoripecheck.jpg" alt="AvocadoCheck" class="center">
+<img src="separating-eggs.gif" alt="Seperate Eggs" class="center" style="padding-top: 40px;padding-bottom: 40px;">
+<img src="for-good-tacos.jpeg" alt="Crunchy Tacos" class="centersmall padding">
+<img src="cofeemate.jpg" alt="Cofee Storage" class="centersmall padding">
+
+</div>
+<!--End Features Tab-->
+
+<!--Start Technical Learning Tab-->
+<div id="Learn" class="w3-container tab" style="display:none;">
+<h1>Technology Haks</h1>
+
+<img src="paper-clip.png" alt="Coords" class="center">
+    
+<img src="96-drop-the-battery.webp" alt="Battery Test" class="center padding">
+
+</div>
+
+</body>
+</html>
